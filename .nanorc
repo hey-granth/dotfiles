@@ -1,0 +1,113 @@
+set tabsize 4
+set tabstospaces
+set autoindent
+set softwrap
+set linenumbers
+set mouse
+set smarthome
+set regexp
+set historylog
+set constantshow
+set matchbrackets "(<[{)>]}"
+set trimblanks
+
+set titlecolor bold,white,blue
+set statuscolor bold,white,green
+set errorcolor bold,white,red
+set selectedcolor black,yellow
+set numbercolor cyan
+set keycolor cyan
+set functioncolor green
+
+bind ^S savefile main
+bind ^Q exit all
+bind ^F whereis main
+bind ^Z undo main
+bind ^Y redo main
+bind ^C copy main
+bind ^V paste main
+bind ^X cut main
+
+syntax "python" "\.py$"
+color brightblue "def |class |import |from |as |return |if |elif |else |while |for |in |with |try |except |finally |raise |pass |break |continue |yield |lambda |assert |del |global |nonlocal"
+color brightcyan "True|False|None|self"
+color brightred ""([^"]|\\")*"|'([^']|\\')*'"
+color magenta "#.*$"
+color yellow "[0-9]+"
+
+syntax "javascript" "\.(js|jsx|ts|tsx)$"
+color brightblue "function |const |let |var |if |else |return |for |while |do |switch |case |break |continue |class |extends |import |export |from |async |await |try |catch |finally |throw |new |typeof |instanceof"
+color brightcyan "true|false|null|undefined|this"
+color brightred ""([^"]|\\")*"|'([^']|\\')*'|`([^`]|\\`)*`"
+color brightgreen "//.*$"
+color brightgreen start="/\*" end="\*/"
+color yellow "[0-9]+"
+
+syntax "c" "\.(c|h)$"
+color brightblue "if |else |while |for |do |switch |case |break |continue |return |goto |struct |typedef |enum |union |sizeof |const |static |extern |inline |void |int |char |float |double |long |short |unsigned |signed"
+color brightcyan "NULL|true|false"
+color brightred ""([^"]|\\")*"|'([^']|\\')*'"
+color brightgreen "//.*$"
+color brightgreen start="/\*" end="\*/"
+color yellow "[0-9]+"
+color magenta "^#.*"
+
+syntax "cpp" "\.(cpp|cc|cxx|hpp|hh|hxx|C|H)$"
+color brightblue "if |else |while |for |do |switch |case |break |continue |return |goto |struct |typedef |enum |union |sizeof |const |static |extern |inline |void |int |char |float |double |long |short |unsigned |signed |bool"
+color brightblue "class |public |private |protected |virtual |override |friend |namespace |using |template |typename |operator |new |delete |this |try |catch |throw"
+color brightblue "const_cast|dynamic_cast|static_cast|reinterpret_cast|auto |decltype |nullptr |constexpr |noexcept |explicit |mutable |volatile"
+color brightcyan "true|false|nullptr|NULL"
+color brightred ""([^"]|\\")*"|'([^']|\\')*'"
+color magenta "//.*$"
+color brightgreen start="/\*" end="\*/"
+color yellow "[0-9]+"
+color magenta "^#.*"
+color brightmagenta "std::|::"
+
+syntax "shell" "\.(sh|bash)$"
+color brightblue "if |then |else |elif |fi |case |esac |for |do |done |while |until |function |return |in |select"
+color brightcyan "\$[A-Za-z0-9_]+"
+color brightred ""([^"]|\\")*"|'[^']*'"
+color brightgreen "#.*$"
+color yellow "[0-9]+"
+
+syntax "html" "\.html?$"
+color brightblue "<[^>]+>"
+color brightred ""[^"]*"|'[^']*'"
+color brightgreen "<!--.*-->"
+color yellow "&[a-z]+;"
+
+syntax "css" "\.css$"
+color brightblue "[a-z-]+:"
+color brightcyan "\{|\}|;|,"
+color brightred ""[^"]*"|'[^']*'"
+color yellow "[0-9]+[a-z%]*"
+color brightgreen "/\*.*\*/"
+
+syntax "json" "\.json$"
+color brightblue ""[^"]*"\s*:"
+color brightred ":.*$"
+color brightcyan "\{|\}|\[|\]|,|:"
+color yellow "[0-9]+"
+color brightcyan "true|false|null"
+
+syntax "markdown" "\.md$"
+color brightblue "^#+.*$"
+color brightred "\*\*[^*]+\*\*|__[^_]+__"
+color brightcyan "\*[^*]+\*|_[^_]+_"
+color yellow "`[^`]+`"
+color brightgreen "^\*.*$|^-.*$|^[0-9]+\..*$"
+color brightmagenta "\[([^\]]+)\]\(([^\)]+)\)"
+
+syntax "yaml" "\.(ya?ml)$"
+color brightblue "^[a-zA-Z_-]+:"
+color brightcyan "^\s+-\s"
+color brightred ""[^"]*"|'[^']*'"
+color brightgreen "#.*$"
+color yellow "[0-9]+"
+color brightcyan "true|false|null|yes|no"
+
+syntax "default"
+color brightred ""([^"]|\\")*"|'([^']|\\')*'"
+color brightgreen "#.*$"
+color yellow "[0-9]+"
