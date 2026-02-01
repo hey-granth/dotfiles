@@ -35,6 +35,10 @@ zstyle ':completion:*' cache-path ~/.zsh/.zcompcache
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 
 # ---------- zoxide ----------
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
 # ---------- Prompt ----------
 autoload -Uz colors vcs_info
 colors
