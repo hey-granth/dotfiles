@@ -131,4 +131,31 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 
 # ---------- Path ----------
+export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/flutter/bin"
+export PATH="/home/granth/flutter/bin:$PATH"
+export ANDROID_SDK_ROOT="/home/granth/Android/Sdk"
+export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+
+# Encryption key for Hive credential store (~/.hive/credentials)
+export HIVE_CREDENTIAL_KEY="pBBcyXXQVz8_QpHc-o4L1OAa2pRxRUfh5dqOqrMMQbY="
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
+autoload -Uz compinit && compinit
+
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# bun completions
+[ -s "/home/granth/.bun/_bun" ] && source "/home/granth/.bun/_bun"
+
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$HOME/.cache/.bun/bin:$PATH"
+export PATH="/root/snap/bun-js/87/.bun/bin:$PATH"
