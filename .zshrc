@@ -138,9 +138,6 @@ export PATH="/home/granth/flutter/bin:$PATH"
 export ANDROID_SDK_ROOT="/home/granth/Android/Sdk"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
-# Encryption key for Hive credential store (~/.hive/credentials)
-export HIVE_CREDENTIAL_KEY="pBBcyXXQVz8_QpHc-o4L1OAa2pRxRUfh5dqOqrMMQbY="
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
